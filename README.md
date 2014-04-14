@@ -14,6 +14,7 @@ Put the following snippet in `.repo/local_manifests/c6503.xml`
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <remote  name="sony" fetch="git://github.com/sonyxperiadev/" />
+<remote  name="zcop" fetch="git://github.com/zcop/" />
 
 <remove-project name="platform/hardware/qcom/display" />
 <remove-project name="platform/hardware/qcom/keymaster" />
@@ -24,18 +25,11 @@ Put the following snippet in `.repo/local_manifests/c6503.xml`
 <remove-project name="platform/hardware/invensense" />
 <remove-project name="platform/hardware/akm" />
 
-<project path="device/sony/lagan" name="device-sony-lagan" groups="device" remote="sony" revision="master" />
-<project path="device/sony/c6503" name="device-sony-c6503" groups="device" remote="sony" revision="master" />
+<project path="device/sony/c6503" name="device_sony_c6503" groups="device" remote="zcop" revision="android-4.4.2_r2" />
+<project path="vendor/sony/c6503" name="vendor_sony_c6503" groups="device" remote="zcop" revision="android-4.4.2_r2" />
 <project path="vendor/sony/dash" name="DASH" groups="device" revision="master" remote="sony" />
 </manifest>
 ```
-
-Download the zip file with vendor binaries from:
-http://developer.sonymobile.com/knowledge-base/open-source/android-open-source-project-for-xperia-devices/
-
-In the root of your Android code tree unzip the `SW_binaries_for_Xperia_Z_Xperia_Tablet_Z_v3.zip`.
-
-You should now have directories named `vendor/sony/lagan` and `vendor/sony/c6503` in your tree.
 
 * `repo sync`
 * `source ./build/envsetup.sh`
