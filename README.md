@@ -13,6 +13,7 @@ Put the following snippet in `.repo/local_manifests/c6503.xml`
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+<remote  name="sony" fetch="git://github.com/sonyxperiadev/" />
 <remote  name="zcop" fetch="git://github.com/zcop/" />
 
 <remove-project name="platform/hardware/qcom/display" />
